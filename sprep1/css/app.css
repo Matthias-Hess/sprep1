@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/RobotoRegular.woff') format('woff');
+}
+@font-face {
+    font-family: 'RobotoBold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/RobotoBold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/RobotoCondensed.woff') format('woff');
+}
+@font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/RobotoSlabRegular.woff') format('woff');
+}
+
+body {
+    font-family: "Roboto";
+
+
+}
+.appThumbnail {
+    float: left;
+    width: 3em;
+    height: 3em;
+    clear:left;
+    background-color: green;
+    margin-right: 5px;
+}
+
+.appListItemTitle {
+    font-family: 'RobotoBold';
+    display:block;
+    font-size: 1.2em;
+    height: 1.2em;
+    overflow: hidden;
+}
+
+.appListItemSmall {
+    display:block;
+
+    font-size:1em;
+    height: 1.8em;
+    overflow: hidden;
+
+}
+
+
+
