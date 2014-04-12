@@ -4,7 +4,7 @@
 <div class="scrollable" >
     <div class="scrollable-content">
         <div class="list-group">
-            <a ng-repeat="stack in stackList.items" href="#" class="list-group-item">
+            <a ng-repeat="stack in stackList.items" href="#/stacks/{{stack._id}}" class="list-group-item">
                 <div class="appThumbnail" ></div>
                 <div class="appListItemTitle">{{stack.name}}</div>
                 <div class="appListItemSmall">{{stack.desc}}</div>

@@ -1,6 +1,5 @@
 'use strict';
 
-
 var spacedApp = angular.module('spacedApp', [
     'ngRoute',
     'ngGrid',
@@ -8,16 +7,22 @@ var spacedApp = angular.module('spacedApp', [
     'mobile-angular-ui.touch',
     'mobile-angular-ui.scrollable'])
     .config(function($routeProvider) {
-          $routeProvider.when('/newStack',
-              {
-                   templateUrl: 'templates/newStack.html',
-                   controller:  'CreateStackController'
-              });
+        $routeProvider.when('/stacks/new',
+          {
+               templateUrl: 'templates/newStack.html',
+               controller:  'CreateStackController'
+          });
 
-          $routeProvider.when('/stackList',
-                {
-                    templateUrl: 'templates/stackList.html',
-                    controller:  'StackListController'
-                });
+        $routeProvider.when('/stacks',
+            {
+                templateUrl: 'templates/stackList.html',
+                controller:  'StackListController'
+            });
+
+        $routeProvider.when('/stacks/:id',
+            {
+                templateUrl : 'templates/newStack.html',
+                controller : 'CreateStackController'
+            });
+
     });
-
