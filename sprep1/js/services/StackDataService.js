@@ -6,9 +6,23 @@ spacedApp.factory('stackDataService', function ($q) {
              db.remove(stack);
          },
 
+         readStack: function (id) {
+             var deferred=$q.defer();
+             var db = new PouchDB('stacks');
+             db.get(id, function(err, doc) {
+                 if (err){
+                     console.log(err);
+                     deferred.reject(err);
+                 }
+                 else {
+                    console.log("doc read!");
+                    deferred.resolve(doc);
+                 }
+             });
+             return deferred.promise;
+         },
 
-
-         getStackList: function  () {
+    getStackList: function  () {
             var deferred=$q.defer();
 
             var db = new PouchDB('stacks');
