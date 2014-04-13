@@ -26,7 +26,7 @@ spacedApp.controller('CreateStackController',
 
         $scope.save = function () {
             stackDataService.saveStack($scope.stack);
-            $location.path('/stackList');
+            
         };
     }
 );

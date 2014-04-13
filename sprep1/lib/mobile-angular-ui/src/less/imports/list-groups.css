@@ -1,0 +1,24 @@
+.list-group-item,
+a.list-group-item {
+  margin-bottom: 0;
+  border: 0 none;
+  border-bottom: 1px solid #dddddd;
+}
+.list-group-item:first-child,
+a.list-group-item:first-child {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+.list-group-item:last-child,
+a.list-group-item:last-child {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.list-group-item .fa.pull-right,
+a.list-group-item .fa.pull-right {
+  margin-top: 4px;
+}
+.list-group-item.media {
+  margin-bottom: 0;
+  margin-top: 0;
+}

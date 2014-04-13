@@ -8,6 +8,11 @@ spacedApp.factory('stackDataService', function ($q) {
 
          readStack: function (id) {
              var deferred=$q.defer();
+             
+             
+             PouchDB.replicate('stacks', 'https://spacedrepetition.couchappy.com/sprep');
+             
+             
              var db = new PouchDB('stacks');
              db.get(id, function(err, doc) {
                  if (err){
