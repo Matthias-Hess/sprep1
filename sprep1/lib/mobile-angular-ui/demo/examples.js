@@ -42,17 +42,17 @@ app.directive( "carouselExampleItem", function($rootScope, $swipe){
       }
 
       $swipe.bind(element, {
-        start: function(coords){
+        start: function(coords) {
           startX = coords.x;
           startY = coords.y;
         },
 
-        cancel: function(e){
+        cancel: function(e) {
           translateAndRotate(0, 0, 0, 0);
           e.stopPropagation();
         },
 
-        end: function(coords, e){
+        end: function(coords, e) {
           if (endAction == "prev") {
             $rootScope.carouselPrev(carouselId);
           } else if (endAction == "next") {
@@ -62,7 +62,7 @@ app.directive( "carouselExampleItem", function($rootScope, $swipe){
           e.stopPropagation();
         },
 
-        move: function(coords){
+        move: function(coords) {
           if( startX != null) {
             var deltaX = coords.x - startX;
             var deltaXRatio = deltaX / element[0].clientWidth;
@@ -95,7 +95,8 @@ app.controller('MainController', function($rootScope, $scope, analytics){
   }
 
   $scope.scrollItems = scrollItems;
-
+  $scope.invoice = {payed: true};
+  
   $scope.userAgent =  navigator.userAgent;
   $scope.chatUsers = [
     { name: "Carlos  Flowers", online: true },
